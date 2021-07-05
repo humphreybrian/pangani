@@ -19,6 +19,8 @@ class CreateProductsTable extends Migration
             $table->string('slug');
             $table->string('description')->nullable();
             $table->decimal('price', 5, 2);
+            $table->string('status')->default('active'); //here the status is either active or inactive.
+            $table->string('end_date')->nullable();; //this is the data of status change.
             $table->timestamps();
         });
     }
